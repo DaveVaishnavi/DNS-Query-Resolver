@@ -6,7 +6,7 @@ from cache import Cache
 def main():
     domain = input("Enter the domain to resolve: ")
 
-    cache = Cache()
+    cache = Cache("cache.json")
 
     # Recursive DNS Query
     ip_recursive = recursive_dns_query(domain, cache)
