@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNS Resolver</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<!-- Force dark mode by adding the dark class to the html element -->
+<html class="dark">
+<body class="bg-gray-900 h-screen flex flex-col justify-center items-center text-white">
+    <div class="bg-gray-800 shadow-lg rounded-lg p-8 w-full max-w-md">
+        <h1 class="text-2xl font-bold text-center mb-6">DNS Resolver</h1>
+        <form action="/resolve" method="POST" class="space-y-4">
+            <div>
+                <label for="domain" class="block text-sm font-medium text-gray-300">Enter Domain Name:</label>
+                <input type="text" id="domain" name="domain" required
+                       class="mt-1 block w-full p-2 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-700 text-white">
+            </div>
+            <div>
+                <button type="submit" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700">
+                    Resolve
+                </button>
+            </div>
+        </form>
+        {% if domain %}
+            <div class="mt-6">
+                <h2 class="text-lg font-semibold">Domain: <span class="text-indigo-500">{{ domain }}</span></h2>
+                <p class="text-lg">IP Address [iterative] : <span class="text-green-500">{{ ip_iterative }}</span></p>
+                <p class="text-lg">IP Address [recursive] : <span class="text-green-500">{{ ip_recursive }}</span></p>
+            </div>
+        {% endif %}
+    </div>
+
+    <footer class="mt-6 text-center text-gray-400">
+        <p>Check out the project on <a href="https://github.com/DaveVaishnavi/DNS-Query-Resolver.git" class="text-indigo-500 hover:underline" target="_blank">GitHub</a>.</p>
+    </footer>
+</body>
+</html>
+
