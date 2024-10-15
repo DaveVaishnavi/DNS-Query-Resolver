@@ -1,6 +1,6 @@
-from recursive_dns_query import recursive_dns_query
-from iterative_dns_query import iterative_dns_query
-from cache import Cache
+from utils.recursive_dns_query import recursive_dns_query
+from utils.iterative_dns_query import iterative_dns_query
+from utils.cache import Cache
 from flask import Flask, render_template, request
 import json
 import time

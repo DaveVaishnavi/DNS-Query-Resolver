@@ -1,5 +1,5 @@
 import unittest
-from cache import Cache
+from utils.cache import Cache
 
 
 class TestCache(unittest.TestCase):

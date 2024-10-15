@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import patch
-from cache import Cache
-from iterative_dns_query import iterative_dns_query
+from utils.cache import Cache
+from utils.iterative_dns_query import iterative_dns_query
 
 
 class TestIterativeDNSQuery(unittest.TestCase):

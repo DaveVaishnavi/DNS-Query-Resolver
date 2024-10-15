@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import patch
-from cache import Cache
-from recursive_dns_query import recursive_dns_query
+from utils.cache import Cache
+from utils.recursive_dns_query import recursive_dns_query
 
 
 class TestRecursiveDNSQuery(unittest.TestCase):
