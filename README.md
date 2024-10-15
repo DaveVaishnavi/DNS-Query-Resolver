@@ -120,3 +120,12 @@ The server will start running on http://127.0.0.1:5000/.
 
 6. Access the Application
 Open your browser and go to http://127.0.0.1:5000/ to use the DNS resolver interface
+
+## User Interface Preview
+
+![index](assets/index.png)
+**Home Page** - Here, users can easily enter their desired domain name and initiate the resolution process with a simple click of the button.
+![resolved](assets/resolved.png)
+**Results Page** - After entering a domain, the IP address is resolved using both iterative and recursive methods.
+![cache](assets/cache.png)
+**Cache Page** - This feature acts as a repository for previously resolved IP addresses, ensuring quick access to frequently used domains while optimizing performance through caching.
