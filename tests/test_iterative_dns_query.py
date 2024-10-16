@@ -12,10 +12,10 @@ class TestIterativeDNSQuery(unittest.TestCase):
     @patch('socket.gethostbyname')
     def test_iterative_dns_query_success(self, mock_gethostbyname):
         """Test a successful iterative DNS query."""
-        mock_gethostbyname.return_value = "93.184.216.34"
+        mock_gethostbyname.return_value = "93.184.215.14"
         result = iterative_dns_query("example.com", self.cache)
-        self.assertEqual(result, "93.184.216.34")
-        self.assertEqual(self.cache.get("example.com"), "93.184.216.34")
+        self.assertEqual(result, "93.184.215.14")
+        self.assertEqual(self.cache.get("example.com"), "93.184.215.14")
 
     @patch('socket.gethostbyname')
     def test_iterative_dns_query_failure(self, mock_gethostbyname):

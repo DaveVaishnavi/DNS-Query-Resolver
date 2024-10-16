@@ -47,3 +47,10 @@ class Cache:
         for key in expired_keys:
             del self.cache[key]
         self.save_cache()
+
+    def clear(self):
+        """Clear entire cache"""
+        keys = [key for key, (_, timestamp) in self.cache.items()]
+        for key in keys:
+            del self.cache[key]
+        self.save_cache()
